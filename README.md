@@ -25,7 +25,7 @@ CONTAINER ID        IMAGE                 COMMAND                  CREATED      
 ```bash
 # Install Laravel
 docker exec app composer create-project laravel/laravel laravel
-docker exec app mv laravel/* ./; mv laravel/.* ./; rm -rf larave
+docker exec app mv laravel/* ./; mv laravel/.* ./; rm -rf laravel
 ```
 
 
