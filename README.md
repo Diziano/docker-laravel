@@ -21,14 +21,11 @@ CONTAINER ID        IMAGE                 COMMAND                  CREATED      
 7b22e39501a0        diziano/php-nginx     "docker-php-entrypoi…"   About a minute ago   Up About a minute   9000/tcp                                   app
 
 ```
-### Create a Laravel application
+### Create a Laravel application (in app container)
 ```bash
-# Get docker files
-git clone https://github.com/diziano/docker-laravel.git
-cd docker-laravel
-
-# Start the application by running the background containers
-docker-compose up -d
+# Install Laravel
+docker exec app composer create-project laravel/laravel laravel
+docker exec app mv laravel/* ./; mv laravel/.* ./; rm -rf larave
 ```
 
 
