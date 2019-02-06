@@ -27,6 +27,7 @@ CONTAINER ID        IMAGE                 COMMAND                  CREATED      
 docker exec app composer create-project laravel/laravel laravel
 docker exec app mv laravel/* ./; mv laravel/.* ./; rm -rf laravel
 ```
+
 ### Configure Laravel application
 ```bash
 # Configure database pparameters in Laravel Environment file
@@ -59,10 +60,7 @@ CREATE DATABASE your_database_name;
 ```
 Note: The database user and password have been defined in docker-compose.yml
 
-```
-
 ### Migrate Laravel
-
 ```bash
 # Run the Laravel artisan migrate command, which creates a table of migrations in the database
 docker exec app php artisan migrate
