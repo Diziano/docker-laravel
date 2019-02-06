@@ -75,7 +75,13 @@ docker exec -it app /bin/bash
 docker-compose up -d
 
 # Stop containers
-ocker-compose down
+docker-compose stop
+
+# Remove containers
+docker-compose down
+
+# Inspect container (get IP, location of volumes files, among others)
+docker inspect container_name_or_id
 ```
 
 
