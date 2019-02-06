@@ -47,7 +47,7 @@ docker exec app php artisan key:generate
 # Generates configuration caching to increase performance
 docker exec app php artisan config:cache
 ```
-This is ready, go to http://localhost or http://your_server_ip to see the Laravel screen runnin
+This is ready, go to http://localhost or http://your_server_ip to see the Laravel screen running
 
 ```
 ### Configure database
