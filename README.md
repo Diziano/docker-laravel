@@ -48,5 +48,30 @@ docker exec app php artisan config:cache
 ```
 This is ready, go to http://localhost or http://your_server_ip to see the Laravel screen runnin
 
+```
+### Configure database
+```bash
+# Log in to your database (the PostgreSQL client must be installed on your machine)
+psql -Upostgres -h localhost
+
+# Create database (with the name defined in the .env file)
+CREATE DATABASE your_database_name;
+```
+Note: The database user and password have been defined in docker-compose.yml
+
+```
+
+### Migrate Laravel
+
+```bash
+# Run the Laravel artisan migrate command, which creates a table of migrations in the database
+docker exec app php artisan migrate
+```
+
+### Useful commands
+```bash
+# Open terminal interative in App container
+docker exec -it app /bin/bash
+```
 
 
