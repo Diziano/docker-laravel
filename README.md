@@ -35,7 +35,7 @@ nano .env
 
 # Parameters of database:
 DB_CONNECTION=pgsql
-DB_HOST=127.0.0.1
+DB_HOST=your_postgresql_ip #See with command: docker inspect db | grep "IPAddress"
 DB_PORT=5432
 DB_DATABASE=your_database_name
 DB_USERNAME=your_database_username
