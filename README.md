@@ -70,6 +70,12 @@ docker exec app php artisan migrate
 ```bash
 # Open terminal interative in App container
 docker exec -it app /bin/bash
+
+# Run containers in background
+docker-compose up -d
+
+# Stop containers
+ocker-compose down
 ```
 
 
