@@ -27,6 +27,26 @@ CONTAINER ID        IMAGE                 COMMAND                  CREATED      
 docker exec app composer create-project laravel/laravel laravel
 docker exec app mv laravel/* ./; mv laravel/.* ./; rm -rf laravel
 ```
+### Configure Laravel application
+```bash
+# Configure database pparameters in Laravel Environment file
+nano .env
+
+# Parameters of database:
+DB_CONNECTION=pgsql
+DB_HOST=127.0.0.1
+DB_PORT=5432
+DB_DATABASE=your_database_name
+DB_USERNAME=your_database_username
+DB_PASSWORD=your_database_password
+
+# Generate a key and copy it to your .env file
+docker exec app php artisan key:generate
+
+# Generates configuration caching to increase performance
+docker exec app php artisan config:cache
+```
+This is ready, go to http://localhost or http://your_server_ip to see the Laravel screen runnin
 
 
 
