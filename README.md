@@ -49,7 +49,7 @@ docker exec app php artisan config:cache
 ```
 This is ready, go to http://localhost or http://your_server_ip to see the Laravel screen running
 
-```
+
 ### Configure database
 ```bash
 # Log in to your database (the PostgreSQL client must be installed on your machine)
